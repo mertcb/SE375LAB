@@ -6,7 +6,6 @@ public class TextManip {
 	public static final String ANSI_RED = "\u001B[31m";
 	public static final String ANSI_YELLOW = "\u001B[33m";
 
-	// String text will change with hashmap
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		try {
@@ -15,8 +14,7 @@ public class TextManip {
 			System.out.println("Please state your choice...\r\n" + "UPPER case or lower case (U or L): ");
 			String upperLower = input.nextLine();
 			caseChanger(map, upperLower);
-			System.out
-					.println("Please state your choice...\r\n" + "How many characters to shift (number between 1-3): ");
+			System.out.println("Please state your choice...\r\n" + "How many characters to shift (number between 1-3): ");
 			int shiftCounter = input.nextInt();
 			input.nextLine();
 			shift(map, shiftCounter);
@@ -53,7 +51,6 @@ public class TextManip {
 				list = map.get(i);
 				list.add(list.get(0).toUpperCase());
 			}
-			return map;
 		}
 		if (choice.equalsIgnoreCase("L")) {
 			for (int i = 1; i <= map.size(); i++) {
